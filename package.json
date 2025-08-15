@@ -1,0 +1,39 @@
+{
+  "name": "roblox-ai-assistant",
+  "version": "2.1.0-beta",
+  "description": "Assistente IA especializado em Roblox Studio para gerar e revisar scripts Luau com interface estilo ChatGPT",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "echo 'Deploy to GitHub Pages'"
+  },
+  "keywords": [
+    "roblox",
+    "luau",
+    "ai",
+    "chatgpt",
+    "script-generator",
+    "roblox-studio",
+    "artificial-intelligence",
+    "code-review",
+    "game-development"
+  ],
+  "author": "Roblox AI Assistant Team",
+  "license": "MIT",
+  "homepage": "https://github.com/seu-usuario/roblox-ai-assistant",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/roblox-ai-assistant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seu-usuario/roblox-ai-assistant/issues"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
