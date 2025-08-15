@@ -265,6 +265,11 @@ pre {
     padding: 1rem;
     overflow-x: auto;
     font-size: 0.9rem;
+    /* --- ALTERAÇÕES INTELIGENTES --- */
+    max-height: 70vh; /* Define a altura máxima para 70% da tela */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    white-space: pre-wrap; /* Quebra a linha de códigos longos */
+    word-wrap: break-word; /* Garante a quebra de palavras */
 }
 
 .alert {
@@ -459,7 +464,8 @@ pre {
         <div class="row">
             <!-- Script Generator -->
             <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow">
+                <!-- ALTERAÇÃO: Removido 'h-100' para permitir altura dinâmica -->
+                <div class="card shadow">
                     <div class="card-header bg-primary text-white">
                         <h4 class="mb-0">
                             <i class="fas fa-code me-2"></i>
@@ -473,7 +479,7 @@ pre {
                                 <textarea 
                                     class="form-control" 
                                     id="scriptDescription" 
-                                    rows="5" 
+                                    rows="10" /* ALTERAÇÃO: Aumentado de 5 para 10 linhas */
                                     placeholder="Ex: Crie um sistema de loja que permite comprar itens com moedas do jogo. O script deve validar se o jogador tem moedas suficientes, processar a compra no servidor e atualizar o inventário..."
                                     required
                                 ></textarea>
@@ -512,7 +518,8 @@ pre {
 
             <!-- Script Reviewer -->
             <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow">
+                 <!-- ALTERAÇÃO: Removido 'h-100' para permitir altura dinâmica -->
+                <div class="card shadow">
                     <div class="card-header bg-success text-white">
                         <h4 class="mb-0">
                             <i class="fas fa-search me-2"></i>
@@ -1011,8 +1018,12 @@ function updateChatHistoryDisplay() {
         chatItem.onclick = () => switchToChat(chat.id);
         
         const date = new Date(chat.createdAt).toLocaleDateString('pt-BR');
-        const preview = chat.messages.length > 0 ? 
-            chat.messages[chat.messages.length - 1].content.substring(0, 50) + '...' : 
+        
+        // --- CORREÇÃO DO ERRO ---
+        // A pré-visualização agora usa a propriedade 'input' da última mensagem, que sempre existe.
+        const lastMessage = chat.messages.length > 0 ? chat.messages[chat.messages.length - 1] : null;
+        const preview = lastMessage && lastMessage.input ? 
+            lastMessage.input.substring(0, 50) + '...' : 
             'Conversa vazia';
         
         chatItem.innerHTML = `
