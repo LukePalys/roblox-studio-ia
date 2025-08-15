@@ -98,9 +98,11 @@ Contribuições são bem-vindas! Abra issues ou pull requests.
 ## 📞 Suporte
 
 - **GitHub Issues**: Para bugs e sugestões
-- **Ou Acesse**: galaxia2964 no youtube!
+- **Ou Acesse**: galaxia2964 no youtube! https://youtube.com/@galaxia2964?si=7nT87vWv_n0fe49V
+- **Obrigado**
 ---
 
 ⭐ **Se este projeto te ajudou, deixe uma estrela no GitHub!**
+
 
 🎮 **Feito com ❤️ para a comunidade Roblox Brasil**
